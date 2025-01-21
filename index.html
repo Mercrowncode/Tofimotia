@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venue Booking</title>
+    <!-- Add Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <div class="hero-container">
+    <nav class="navbar">
+      <div class="nav-brand">TOFIMOTIA</div>
+      
+      <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+
+      <div class="nav-menu">
+          <div class="nav-links">
+              <a href="#" class="nav-link">Home</a>
+              <a href="#" class="nav-link">About Us</a>
+              <a href="#" class="nav-link">Browse Vendors</a>
+              <a href="#" class="nav-link">Categories</a>
+              <a href="#" class="nav-link">Explore Venues</a>
+              <a href="#" class="nav-link">Contact Us</a>
+          </div>
+          <div class="auth-buttons">
+              <button class="login-btn">Log in</button>
+              <button class="signup-btn">Sign up</button>
+          </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Your Perfect Venue,<br>Just A Click Away</h1>
+        <p class="tagline">Discover. Book. Celebrate.</p>
+        <div class="cta-buttons">
+          <button class="primary-btn">Book Events</button>
+          <button class="secondary-btn">Learn More</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+        <h2 class="section-title">How It Works</h2>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3>Search Venues</h3>
+                <p>Browse through our curated selection of premium event spaces</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-icon">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <h3>Book Instantly</h3>
+                <p>Select your date and time, then book with just a few clicks</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-icon">
+                    <i class="fas fa-glass-cheers"></i>
+                </div>
+                <h3>Celebrate</h3>
+                <p>Enjoy your perfectly planned event at your chosen venue</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="vendors">
+        <h2 class="section-title">Explore Top Vendors</h2>
+        <div class="vendors-carousel">
+            <div class="vendor-card">
+                <div class="vendor-profile">
+                    <img src="../assets/Taiwo.jpg" alt="Sunset Gardens Profile">
+                </div>
+                <div class="vendor-info">
+                    <h3>Sunset Gardens</h3>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> Downtown, NYC</p>
+                    <p class="schedule"><i class="fas fa-clock"></i> Available Today</p>
+                    <p class="capacity"><i class="fas fa-users"></i> Up to 200 guests</p>
+                </div>
+            </div>
+
+            <div class="vendor-card">
+                <div class="vendor-profile">
+                    <img src="../assets/Taiwo.jpg" alt="Crystal Palace Profile">
+                </div>
+                <div class="vendor-info">
+                    <h3>Crystal Palace</h3>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> Upper East Side</p>
+                    <p class="schedule"><i class="fas fa-clock"></i> Open 9AM - 11PM</p>
+                    <p class="capacity"><i class="fas fa-users"></i> Up to 350 guests</p>
+                </div>
+            </div>
+
+            <div class="vendor-card">
+                <div class="vendor-profile">
+                    <img src="../assets/Taiwo.jpg" alt="Garden View Profile">
+                </div>
+                <div class="vendor-info">
+                    <h3>Garden View</h3>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> Brooklyn Heights</p>
+                    <p class="schedule"><i class="fas fa-clock"></i> Weekend Availability</p>
+                    <p class="capacity"><i class="fas fa-users"></i> Up to 150 guests</p>
+                </div>
+            </div>
+
+            <div class="vendor-card">
+                <div class="vendor-profile">
+                    <img src="../assets/Taiwo.jpg" alt="Royal Events Profile">
+                </div>
+                <div class="vendor-info">
+                    <h3>Royal Events</h3>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> Manhattan</p>
+                    <p class="schedule"><i class="fas fa-clock"></i> 24/7 Available</p>
+                    <p class="capacity"><i class="fas fa-users"></i> Up to 500 guests</p>
+                </div>
+            </div>
+
+            <div class="vendor-card">
+                <div class="vendor-profile">
+                    <img src="../assets/Taiwo.jpg" alt="Skyline Venue Profile">
+                </div>
+                <div class="vendor-info">
+                    <h3>Skyline Venue</h3>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> Financial District</p>
+                    <p class="schedule"><i class="fas fa-clock"></i> Booking for Fall</p>
+                    <p class="capacity"><i class="fas fa-users"></i> Up to 300 guests</p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-controls">
+            <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <section class="why-choose">
+        <div class="why-choose-content">
+            <h2>Why Choose TOFIMOTIA?</h2>
+            <p>We understand the importance of finding the perfect venue for your special events. Our platform connects you with premium venues and experienced vendors, making the booking process seamless and stress-free.</p>
+            <p>Whether you're planning a wedding, corporate event, or private celebration, we're here to help you create unforgettable moments.</p>
+            <button class="learn-more-btn">Learn more</button>
+        </div>
+        <div class="why-choose-images">
+            <img src="../assets/Grid Image.jpg" alt="Event Venues Collection" class="grid-img">
+        </div>
+    </section>
+
+    <section class="customization-tool">
+        <div class="tool-content">
+            <h2>Venue Customization Tool</h2>
+            <p class="tool-description">Design your perfect event space with our intuitive customization tool. Personalize layouts, add decorations, and visualize your dream venue before booking.</p>
+            <ul class="tool-features">
+                <li>
+                    <i class="fas fa-vector-square"></i>
+                    <span>Layout Design</span>
+                </li>
+                <li>
+                    <i class="fas fa-paint-brush"></i>
+                    <span>Decoration Personalization</span>
+                </li>
+                <li>
+                    <i class="fas fa-cube"></i>
+                    <span>Add Amenities</span>
+                </li>
+            </ul>
+            <button class="use-tool-btn">Use Tool</button>
+        </div>
+        <div class="tool-image">
+            <img src="../assets/Customization tool Image.jpg" alt="Venue Customization Tool">
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2 class="section-title">Voices That Inspire Us</h2>
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="testimonial-text">
+                    "The venue was absolutely perfect for our wedding. The customization tools made planning so much easier, and the staff was incredibly helpful throughout the process."
+                </p>
+                <h3 class="customer-name">Sarah Johnson</h3>
+                <p class="customer-location">New York, USA</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="testimonial-text">
+                    "I couldn't have asked for a better platform to find and book our corporate event venue. The process was seamless from start to finish."
+                </p>
+                <h3 class="customer-name">Michael Chen</h3>
+                <p class="customer-location">San Francisco, USA</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="testimonial-text">
+                    "The attention to detail and customer service was outstanding. Our anniversary celebration was exactly how we envisioned it."
+                </p>
+                <h3 class="customer-name">Emily Parker</h3>
+                <p class="customer-location">Chicago, USA</p>
+            </div>
+        </div>
+        <div class="testimonial-pagination">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+   
+    <footer class="footer-section">
+        <!-- CTA Banner -->
+        <div class="cta-banner">
+            <div class="cta-content">
+                <h2>Catch the Hottest Venues in Lagos Today!</h2>
+                <p>From star-studded shows and buzzing nightlife to exclusive gatherings and cultural festivals—discover, book, and make memories at Lagos' finest events.</p>
+                <div class="cta-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button class="join-btn">Join Us</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Footer -->
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="company-info">
+                    <h3>TOFIMOTIA</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 53, Sandfill Bus Stop, Victoria Island, Lagos.</p>
+                    <p><i class="fas fa-phone"></i> 08123456789</p>
+                    <p><i class="fas fa-envelope"></i> tofimotia@company.com</p>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="link-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="link-column">
+                    <h4>Vendors</h4>
+                    <ul>
+                        <li><a href="#">Find Vendors</a></li>
+                        <li><a href="#">Explore Venues</a></li>
+                        <li><a href="#">Communities</a></li>
+                        <li><a href="#">User Reviews</a></li>
+                    </ul>
+                </div>
+
+                <div class="link-column">
+                    <h4>Discover</h4>
+                    <ul>
+                        <li><a href="#">Event Trends</a></li>
+                        <li><a href="#">Pricing & Packages</a></li>
+                        <li><a href="#">Local Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="link-column">
+                    <h4>Support/Legal</h4>
+                    <ul>
+                        <li><a href="#">Customer Support</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 TOFIMOTIA. All rights reserved.</p>
+        </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html> 
