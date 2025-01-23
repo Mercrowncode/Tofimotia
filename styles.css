@@ -291,40 +291,25 @@ body {
   visibility: visible;
 }
 
-/* How It Works Section */
-.how-it-works {
-    padding: 5rem 4rem;
-    background-color: #f8f9fa;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 3rem;
+/* How it works section */
+.how-it-works-container {
+    padding: 4rem 2rem;
 }
 
 .steps-container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.step {
-    flex: 1;
-    text-align: center;
-    padding: 2rem;
-    position: relative;
+.step-card {
     background: white;
+    padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.step:hover {
-    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .step-number {
@@ -358,6 +343,26 @@ body {
 .step p {
     color: #666;
     line-height: 1.6;
+}
+
+/* Mobile specific adjustments */
+@media screen and (max-width: 768px) {
+    .steps-container {
+        grid-template-columns: 1fr;  /* Single column on mobile */
+        gap: 1.5rem;
+    }
+
+    .step-card {
+        padding: 1.5rem;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    .step-card img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+    }
 }
 
 /* Vendors Section */
