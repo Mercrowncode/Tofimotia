@@ -72,11 +72,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
     const body = document.body;
+    let overlay;
 
-    // Create overlay
-    const overlay = document.createElement('div');
-    overlay.classList.add('overlay');
-    body.appendChild(overlay);
+    // Create and append overlay if it doesn't exist
+    if (!document.querySelector('.overlay')) {
+        overlay = document.createElement('div');
+        overlay.classList.add('overlay');
+        body.appendChild(overlay);
+    } else {
+        overlay = document.querySelector('.overlay');
+    }
 
     function toggleMenu() {
         hamburger.classList.toggle('active');
@@ -85,12 +90,13 @@ document.addEventListener('DOMContentLoaded', function() {
         body.style.overflow = body.style.overflow === 'hidden' ? '' : 'hidden';
     }
 
-    // Event listeners
+    // Event Listeners
     hamburger.addEventListener('click', toggleMenu);
     overlay.addEventListener('click', toggleMenu);
 
-    // Close menu when clicking links
-    document.querySelectorAll('.nav-link').forEach(link => {
+    // Close menu when clicking a nav link
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
         link.addEventListener('click', () => {
             if (navMenu.classList.contains('active')) {
                 toggleMenu();
@@ -109,6 +115,26 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && navMenu.classList.contains('active')) {
             toggleMenu();
+        }
+    });
+
+    const navbar = document.querySelector('.navbar');
+    
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+            // Update text colors when scrolled
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.style.color = 'var(--primary-color)';
+            });
+            document.querySelector('.nav-brand').style.color = 'var(--primary-color)';
+        } else {
+            navbar.classList.remove('scrolled');
+            // Restore original text colors
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.style.color = 'var(--white)';
+            });
+            document.querySelector('.nav-brand').style.color = 'var(--white)';
         }
     });
 }); 

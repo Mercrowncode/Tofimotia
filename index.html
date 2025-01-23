@@ -14,7 +14,9 @@
 <body>
   <div class="hero-container">
     <nav class="navbar">
-      <div class="nav-brand">TOFIMOTIA</div>
+      <div class="nav-brand">
+        <img src="./assets/Logo.png" alt="TOFIMOTIA Logo" class="logo">
+      </div>
       
       <div class="hamburger">
           <span></span>
@@ -27,7 +29,10 @@
               <a href="#" class="nav-link">Home</a>
               <a href="#" class="nav-link">About Us</a>
               <a href="#" class="nav-link">Browse Vendors</a>
-              <a href="#" class="nav-link">Categories</a>
+              <a href="#" class="nav-link dropdown-link">
+                  Categories 
+                  <i class="fas fa-chevron-down"></i>
+              </a>
               <a href="#" class="nav-link">Explore Venues</a>
               <a href="#" class="nav-link">Contact Us</a>
           </div>
@@ -40,7 +45,7 @@
 
     <section class="hero">
       <div class="hero-content">
-        <h1>Your Perfect Venue,<br>Just A Click Away</h1>
+        <h1>Your Perfect Venue, Just A Click Away</h1>
         <p class="tagline">Discover. Book. Celebrate.</p>
         <div class="cta-buttons">
           <button class="primary-btn">Book Events</button>
@@ -229,79 +234,9 @@
     </section>
 
    
-    <footer class="footer-section">
-        <!-- CTA Banner -->
-        <div class="cta-banner">
-            <div class="cta-content">
-                <h2>Catch the Hottest Venues in Lagos Today!</h2>
-                <p>From star-studded shows and buzzing nightlife to exclusive gatherings and cultural festivals—discover, book, and make memories at Lagos' finest events.</p>
-                <div class="cta-form">
-                    <input type="email" placeholder="Enter your email">
-                    <button class="join-btn">Join Us</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Main Footer -->
-        <div class="footer-content">
-            <div class="footer-info">
-                <div class="company-info">
-                    <h3>TOFIMOTIA</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> 53, Sandfill Bus Stop, Victoria Island, Lagos.</p>
-                    <p><i class="fas fa-phone"></i> 08123456789</p>
-                    <p><i class="fas fa-envelope"></i> tofimotia@company.com</p>
-                </div>
-            </div>
-
-            <div class="footer-links">
-                <div class="link-column">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Categories</a></li>
-                        <li><a href="#">Features</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-
-                <div class="link-column">
-                    <h4>Vendors</h4>
-                    <ul>
-                        <li><a href="#">Find Vendors</a></li>
-                        <li><a href="#">Explore Venues</a></li>
-                        <li><a href="#">Communities</a></li>
-                        <li><a href="#">User Reviews</a></li>
-                    </ul>
-                </div>
-
-                <div class="link-column">
-                    <h4>Discover</h4>
-                    <ul>
-                        <li><a href="#">Event Trends</a></li>
-                        <li><a href="#">Pricing & Packages</a></li>
-                        <li><a href="#">Local Services</a></li>
-                    </ul>
-                </div>
-
-                <div class="link-column">
-                    <h4>Support/Legal</h4>
-                    <ul>
-                        <li><a href="#">Customer Support</a></li>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Copyright -->
-        <div class="footer-bottom">
-            <p>&copy; 2024 TOFIMOTIA. All rights reserved.</p>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
   </div>
   <script src="script.js"></script>
+  <script src="loadFooter.js"></script>
 </body>
 </html> 

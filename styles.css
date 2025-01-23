@@ -15,8 +15,12 @@ body {
 }
 
 .hero-container {
-  position: relative;
   height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/Outdoor venue.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
 .navbar {
@@ -28,37 +32,80 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 4rem;
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
   z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .nav-brand {
+  display: flex;
+  align-items: center;
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: var(--white);
 }
 
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .nav-links {
   display: flex;
   gap: 2rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .nav-link {
+  color: var(--white);
   text-decoration: none;
-  color: var(--primary-color);
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .nav-link:hover {
   color: var(--accent-color);
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;
+}
+
+.login-btn, .signup-btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.login-btn {
+  background: transparent;
+  border: 1px solid var(--white);
+  color: var(--white);
+}
+
+.signup-btn {
+  background: var(--accent-color);
+  border: none;
+  color: var(--white);
+}
+
+.navbar.scrolled .nav-link,
+.navbar.scrolled .nav-brand {
+  color: var(--primary-color);
 }
 
 .hamburger {
@@ -77,65 +124,41 @@ body {
   transition: all 0.3s ease;
 }
 
-.auth-buttons {
-  display: flex;
-  gap: 1rem;
-}
-
-.login-btn, .signup-btn {
-  padding: 0.5rem 1.5rem;
-  border-radius: 25px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.login-btn {
-  background: transparent;
-  border: 2px solid var(--primary-color);
-  color: var(--primary-color);
-}
-
-.signup-btn {
-  background: var(--primary-color);
-  border: none;
-  color: var(--white);
-}
-
 .hero {
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-              url('../assets/Outdoor venue.jpg');
-  background-size: cover;
-  background-position: center;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 4rem;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-content {
-  max-width: 800px;
-  color: var(--white);
+  position: relative;
+  z-index: 3;
   text-align: center;
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .hero-content h1 {
-  font-size: 4rem;
-  font-weight: 700;
-  line-height: 1.2;
+  font-size: 3.5rem;
+  color: var(--white);
   margin-bottom: 1.5rem;
+  white-space: nowrap;
 }
 
 .tagline {
   font-size: 1.5rem;
-  margin-bottom: 2.5rem;
-  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 2rem;
 }
 
 .cta-buttons {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   justify-content: center;
 }
 
@@ -188,12 +211,11 @@ body {
     max-width: 400px;
     height: 100vh;
     background-color: white;
-    padding: 6rem 2rem;
-    transition: 0.3s ease;
-    z-index: 1000;
+    padding: 4rem 2rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    transition: 0.3s ease;
+    z-index: 1000;
   }
 
   .nav-menu.active {
@@ -202,26 +224,51 @@ body {
   }
 
   .nav-links {
+    position: static;
+    transform: none;
     flex-direction: column;
-    gap: 2rem;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .nav-link {
+    color: var(--primary-color) !important;
+    width: 100%;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-size: 1.1rem;
   }
 
   .auth-buttons {
+    display: flex;
     flex-direction: column;
     width: 100%;
     gap: 1rem;
+    margin-top: 2rem;
   }
 
-  .hamburger.active span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
+  .login-btn, .signup-btn {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
   }
 
-  .hamburger.active span:nth-child(2) {
-    opacity: 0;
+  .login-btn {
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color) !important;
   }
 
-  .hamburger.active span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
+  .signup-btn {
+    background: var(--accent-color);
+    color: white !important;
+  }
+
+  /* Close button */
+  .hamburger.active {
+    position: fixed;
+    right: 2rem;
   }
 }
 
@@ -781,8 +828,8 @@ body {
 
 /* Footer Styles */
 .footer-section {
-    background-color: #1a1a1a;
-    color: var(--white);
+    background-color: #C8C2C2;
+    color: #3E3E3E;
     position: relative;
     padding-top: 150px;
 }
@@ -852,45 +899,68 @@ body {
 
 /* Main Footer */
 .footer-content {
-    padding: 4rem;
     display: flex;
     justify-content: space-between;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 4rem;
     gap: 4rem;
-}
-
-.company-info {
-    max-width: 300px;
-}
-
-.company-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.company-info p {
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
 }
 
 .footer-links {
     display: flex;
     gap: 4rem;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.footer-info {
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.footer-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #3E3E3E;
+}
+
+.footer-logo {
+    height: 45px;
+    width: auto;
+    margin-bottom: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: #3E3E3E;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.link-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .link-column h4 {
-    color: var(--white);
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
+    color: #3E3E3E;
+    margin-bottom: 1rem;
 }
 
 .link-column ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .link-column ul li {
@@ -898,24 +968,20 @@ body {
 }
 
 .link-column ul li a {
-    color: rgba(255, 255, 255, 0.7);
+    color: #3E3E3E;
     text-decoration: none;
     transition: color 0.3s ease;
-}
-
-.link-column ul li a:hover {
-    color: var(--white);
 }
 
 /* Copyright */
 .footer-bottom {
     text-align: center;
     padding: 1.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(62, 62, 62, 0.1);
 }
 
 .footer-bottom p {
-    color: rgba(255, 255, 255, 0.7);
+    color: #3E3E3E;
     font-size: 0.9rem;
 }
 
@@ -954,4 +1020,100 @@ body {
     .link-column {
         min-width: 150px;
     }
+}
+
+/* Add these styles for the dropdown */
+.dropdown-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dropdown-link i {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-link:hover i {
+    transform: rotate(180deg);
+}
+
+/* Add responsive adjustments */
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+        white-space: normal;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .tagline {
+        font-size: 1.2rem;
+    }
+}
+
+/* Logo styles */
+.logo {
+    height: 40px;
+    width: auto;
+}
+
+/* Updated Footer Logo styles */
+.footer-brand {
+    margin-bottom: 2rem;
+}
+
+.footer-logo {
+    height: 50px;
+    width: auto;
+}
+
+.company-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Update nav-brand to handle logo */
+.nav-brand {
+    display: flex;
+    align-items: center;
+}
+
+/* Updated Footer Styles */
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.footer-logo {
+    height: 45px;
+    width: auto;
+    margin-bottom: 1rem;
+}
+
+.footer-info p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: #3E3E3E;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
 } 
