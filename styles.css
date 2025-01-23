@@ -16,7 +16,7 @@ body {
 
 .hero-container {
   height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/Hero Image.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('public/assets/Outdoor venue.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1116,4 +1116,9 @@ body {
 
 .social-links a:hover {
     color: var(--accent-color);
+}
+
+/* Any other background images */
+.other-section {
+    background-image: url('public/assets/Grid Image.jpg');
 } 
