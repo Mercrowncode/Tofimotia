@@ -362,6 +362,8 @@ body {
     padding: 5rem 4rem;
     position: relative;
     background-color: #f8f9fa;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .section-header {
@@ -415,6 +417,8 @@ body {
     padding: 1rem;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 .vendors-carousel::-webkit-scrollbar {
