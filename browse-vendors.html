@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Vendors - TOFIMOTIA</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="public/assets/favicon.png">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Browse Vendors - TOFIMOTIA">
+    <meta property="og:description" content="Explore our curated selection of trusted and highly-rated vendors in Lagos">
+    <meta property="og:image" content="public/assets/og-image.jpg">
+    <meta property="og:url" content="https://tofimotia.com/browse-vendors">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="index.html" class="logo">
+                    <img src="public/assets/Logo.png" alt="TOFIMOTIA Logo">
+                </a>
+            </div>
+
+            <div class="nav-center">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="browse-vendors.html" class="nav-link active">Browse Vendors</a>
+                <div class="dropdown">
+                    <a href="#" class="nav-link dropbtn">
+                        Categories 
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#">Wedding Venues</a>
+                        <a href="#">Corporate Events</a>
+                        <a href="#">Birthday Parties</a>
+                        <a href="#">Cultural Events</a>
+                    </div>
+                </div>
+                <a href="#" class="nav-link">Explore Venues</a>
+                <a href="#" class="nav-link">Contact Us</a>
+            </div>
+
+            <div class="nav-right">
+                <div class="auth-buttons">
+                    <a href="#" class="btn btn-outline">Log In</a>
+                    <a href="#" class="btn btn-primary">Sign Up</a>
+                </div>
+            </div>
+
+            <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <div class="mobile-nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="browse-vendors.html" class="nav-link active">Browse Vendors</a>
+                <div class="mobile-dropdown">
+                    <a href="#" class="nav-link mobile-dropbtn">
+                        Categories
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="mobile-dropdown-content">
+                        <a href="#">Wedding Venues</a>
+                        <a href="#">Corporate Events</a>
+                        <a href="#">Birthday Parties</a>
+                        <a href="#">Cultural Events</a>
+                    </div>
+                </div>
+                <a href="#" class="nav-link">Explore Venues</a>
+                <a href="#" class="nav-link">Contact Us</a>
+            </div>
+            <div class="mobile-auth-buttons">
+                <a href="#" class="btn btn-outline">Log In</a>
+                <a href="#" class="btn btn-primary">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="vendor-hero">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Find Trusted Vendors for<br>Your Event</h1>
+                    <p class="hero-description">
+                        Discover a curated list of reliable vendors<br>
+                        to make your event unforgettable.
+                    </p>
+
+                    <div class="search-container">
+                        <form class="search-form" action="/search" method="GET">
+                            <div class="search-group">
+                                <i class="fas fa-search"></i>
+                                <input type="text" 
+                                       placeholder="Search for vendors by category or name"
+                                       name="query"
+                                       class="search-input">
+                            </div>
+                            <div class="search-group">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <input type="text" 
+                                       placeholder="Location"
+                                       name="location"
+                                       class="search-input">
+                            </div>
+                            <button type="button" class="btn btn-outline filters-btn">
+                                <i class="fas fa-sliders-h"></i> Filters
+                            </button>
+                            <button type="submit" class="btn btn-primary search-btn">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Vendors Section -->
+        <section class="section featured-vendors">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Vendors</h2>
+                    <p class="section-description">
+                        Explore a curated selection of the most trusted and highly-rated vendors in Lagos,
+                        handpicked to bring your events to life with exceptional services and unparalleled professionalism.
+                    </p>
+                </div>
+
+                <div class="vendors-grid">
+                    <!-- Vendor Card 1 -->
+                    <div class="vendor-card">
+                        <div class="vendor-image">
+                            <img src="public/assets/vendors/vendor1.jpg" alt="Sunshine Events - Outdoor Setup" loading="lazy">
+                        </div>
+                        <div class="vendor-info">
+                            <h3>Sunshine Events</h3>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> 8, Adeola Odeku, VI, Lagos.</p>
+                            <p class="services">
+                                <span>Services:</span> Wedding Catering, Birthday Cakes
+                            </p>
+                            <a href="#" class="btn btn-secondary view-more">View More</a>
+                        </div>
+                    </div>
+
+                    <!-- Vendor Card 2 -->
+                    <div class="vendor-card">
+                        <div class="vendor-image">
+                            <img src="public/assets/vendors/vendor2.jpg" alt="Sunshine Events - Indoor Event" loading="lazy">
+                        </div>
+                        <div class="vendor-info">
+                            <h3>Sunshine Events</h3>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> 8, Adeola Odeku, VI, Lagos.</p>
+                            <p class="services">
+                                <span>Services:</span> Wedding Catering, Birthday Cakes
+                            </p>
+                            <a href="#" class="btn btn-secondary view-more">View More</a>
+                        </div>
+                    </div>
+
+                    <!-- Vendor Card 3 -->
+                    <div class="vendor-card">
+                        <div class="vendor-image">
+                            <img src="public/assets/vendors/vendor3.jpg" alt="Sunshine Events - Party Setup" loading="lazy">
+                        </div>
+                        <div class="vendor-info">
+                            <h3>Sunshine Events</h3>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> 8, Adeola Odeku, VI, Lagos.</p>
+                            <p class="services">
+                                <span>Services:</span> Wedding Catering, Birthday Cakes
+                            </p>
+                            <a href="#" class="btn btn-secondary view-more">View More</a>
+                        </div>
+                    </div>
+
+                    <!-- Vendor Card 4 -->
+                    <div class="vendor-card">
+                        <div class="vendor-image">
+                            <img src="public/assets/vendors/vendor4.jpg" alt="Sunshine Events - Table Setup" loading="lazy">
+                        </div>
+                        <div class="vendor-info">
+                            <h3>Sunshine Events</h3>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> 8, Adeola Odeku, VI, Lagos.</p>
+                            <p class="services">
+                                <span>Services:</span> Wedding Catering, Birthday Cakes
+                            </p>
+                            <a href="#" class="btn btn-secondary view-more">View More</a>
+                        </div>
+                    </div>
+
+                    <!-- Vendor Card 5 -->
+                    <div class="vendor-card">
+                        <div class="vendor-image">
+                            <img src="public/assets/vendors/vendor5.jpg" alt="Sunshine Events - Catering" loading="lazy">
+                        </div>
+                        <div class="vendor-info">
+                            <h3>Sunshine Events</h3>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> 8, Adeola Odeku, VI, Lagos.</p>
+                            <p class="services">
+                                <span>Services:</span> Wedding Catering, Birthday Cakes
+                            </p>
+                            <a href="#" class="btn btn-secondary view-more">View More</a>
+                        </div>
+                    </div>
+
+                    <!-- Vendor Card 6 -->
+                    <div class="vendor-card">
+                        <div class="vendor-image">
+                            <img src="public/assets/vendors/vendor6.jpg" alt="Sunshine Events - Event Space" loading="lazy">
+                        </div>
+                        <div class="vendor-info">
+                            <h3>Sunshine Events</h3>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> 8, Adeola Odeku, VI, Lagos.</p>
+                            <p class="services">
+                                <span>Services:</span> Wedding Catering, Birthday Cakes
+                            </p>
+                            <a href="#" class="btn btn-secondary view-more">View More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="more-vendors">
+                    <a href="#" class="btn btn-primary">
+                        More Vendors <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+    <!-- Explore by Category Section -->
+    <section class="section categories-section">
+        <div class="container">
+            <h2 class="section-title">Explore by Category</h2>
+            <div class="category-circles">
+                <div class="category-item">
+                    <div class="category-circle">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <span>Catering Services</span>
+                </div>
+                <div class="category-item">
+                    <div class="category-circle">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <span>Decor & Design</span>
+                </div>
+                <div class="category-item">
+                    <div class="category-circle">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <span>Photography & Videography</span>
+                </div>
+                <div class="category-item">
+                    <div class="category-circle">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <span>Entertainment</span>
+                </div>
+                <div class="category-item">
+                    <div class="category-circle">
+                        <i class="fas fa-flower"></i>
+                    </div>
+                    <span>Florists</span>
+                </div>
+                <div class="category-item">
+                    <div class="category-circle">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <span>Lighting & Sounds</span>
+                </div>
+                <div class="category-item">
+                    <div class="category-circle">
+                        <i class="fas fa-chair"></i>
+                    </div>
+                    <span>Rentals</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Rated Vendors Section -->
+    <section class="section top-rated-section">
+        <div class="container">
+            <h2 class="section-title">Top Rated Vendors in Lagos</h2>
+            <div class="top-rated-slider">
+                <!-- Vendor Card 1 -->
+                <div class="vendor-card horizontal">
+                    <div class="vendor-image">
+                        <img src="public/assets/vendors/vendor1.jpg" alt="John Rentals - Luxury Setup" loading="lazy">
+                    </div>
+                    <div class="vendor-info">
+                        <h3>John Rentals</h3>
+                        <p class="specialty">Specialising in luxury event catering</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <a href="#" class="btn btn-outline view-profile">View Profile</a>
+                    </div>
+                </div>
+
+                <!-- Vendor Card 2 -->
+                <div class="vendor-card horizontal">
+                    <div class="vendor-image">
+                        <img src="public/assets/vendors/vendor2.jpg" alt="John Rentals - Indoor Setup" loading="lazy">
+                    </div>
+                    <div class="vendor-info">
+                        <h3>John Rentals</h3>
+                        <p class="specialty">Specialising in luxury event catering</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <a href="#" class="btn btn-outline view-profile">View Profile</a>
+                    </div>
+                </div>
+
+                <!-- Vendor Card 3 -->
+                <div class="vendor-card horizontal">
+                    <div class="vendor-image">
+                        <img src="public/assets/vendors/vendor3.jpg" alt="John Rentals - Outdoor Setup" loading="lazy">
+                    </div>
+                    <div class="vendor-info">
+                        <h3>John Rentals</h3>
+                        <p class="specialty">Specialising in luxury event catering</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <a href="#" class="btn btn-outline view-profile">View Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section packages-section">
+        <div class="container">
+            <h2 class="section-title">Packages & Deals</h2>
+            <div class="packages-grid">
+                <!-- Exclusive Venue Packages -->
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="public/assets/packages/exclusive-venue.jpg" alt="Exclusive Venue Package" loading="lazy">
+                        <div class="package-overlay"></div>
+                    </div>
+                    <div class="package-content">
+                        <h3>Exclusive Venue Packages</h3>
+                        <p>Experience luxury with our premium venue packages, featuring elegant dining setups and exceptional service.</p>
+                        <a href="#" class="btn btn-outline">View Packages</a>
+                    </div>
+                </div>
+
+                <!-- Seasonal Offers -->
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="public/assets/packages/seasonal-offers.jpg" alt="Seasonal Offers" loading="lazy">
+                        <div class="package-overlay"></div>
+                    </div>
+                    <div class="package-content">
+                        <h3>Seasonal Offers</h3>
+                        <p>Take advantage of our limited-time deals on select venues and create unforgettable moments.</p>
+                        <a href="#" class="btn btn-outline">View Offers</a>
+                    </div>
+                </div>
+
+                <!-- Customizable Bundles -->
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="public/assets/packages/customizable-bundles.jpg" alt="Customizable Bundles" loading="lazy">
+                        <div class="package-overlay"></div>
+                    </div>
+                    <div class="package-content">
+                        <h3>Customizable Bundles</h3>
+                        <p>Design your perfect event package with our flexible bundling options tailored to your needs.</p>
+                        <a href="#" class="btn btn-outline">Build Your Bundle</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+</body>
+</html>

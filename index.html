@@ -3,407 +3,334 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venue Booking</title>
-    <!-- Add Inter font from Google Fonts -->
+    <title>TOFIMOTIA - Find Your Perfect Event Venue</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Link to your CSS file -->
     <link rel="stylesheet" href="styles.css">
-    <!-- Add Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <div class="hero-container">
-    <nav class="navbar">
-      <div class="nav-brand">
-        <img src="public/assets/Logo.png" alt="TOFIMOTIA Logo" class="logo">
-      </div>
-      
-      <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-      </div>
+    <!-- Header will be loaded here -->
+    <header id="header-container"></header>
 
-      <div class="nav-menu">
-          <div class="nav-links">
-              <a href="#" class="nav-link">Home</a>
-              <a href="#" class="nav-link">About Us</a>
-              <a href="#" class="nav-link">Browse Vendors</a>
-              <a href="#" class="nav-link dropdown-link">
-                  Categories 
-                  <i class="fas fa-chevron-down"></i>
-              </a>
-              <a href="#" class="nav-link">Explore Venues</a>
-              <a href="#" class="nav-link">Contact Us</a>
-          </div>
-          <div class="auth-buttons">
-              <button class="login-btn">Log in</button>
-              <button class="signup-btn">Sign up</button>
-          </div>
-      </div>
-    </nav>
-
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Your Perfect Venue, Just A Click Away</h1> 
-        <p class="tagline">Discover. Book. Celebrate.</p>
-        <div class="cta-buttons">
-          <button class="primary-btn">Book Events</button>
-          <button class="secondary-btn">Learn More</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="how-it-works-container">
-        <h2>How It Works</h2>
-        <div class="steps-container">
-            <div class="step-card">
-                <h3>Step 1</h3>
-                <div class="icon">
-                    <img src="assets/location-icon.png" alt="Search Location">
-                </div>
-                <h4>Search Location</h4>
-                <p>Browse by location, capacity, or type of event to discover spaces that match your vision.</p>
-            </div>
-
-            <div class="step-card">
-                <h3>Step 2</h3>
-                <div class="icon">
-                    <img src="assets/vendors-icon.png" alt="Connect With Vendors">
-                </div>
-                <h4>Connect With Vendors</h4>
-                <p>Reach out to event vendors, check availability, and finalize details-all in one place!</p>
-            </div>
-
-            <div class="step-card">
-                <h3>Step 3</h3>
-                <div class="icon">
-                    <img src="assets/book-icon.png" alt="Book An Event">
-                </div>
-                <h4>Book An Event</h4>
-                <p>Secure your venue with ease. Confirm your booking and start planning your event!</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="vendors">
-        <div class="section-header">
-            <h2 class="section-title">Explore Top Vendors</h2>
-            <p class="section-description">Discover our hand-picked selection of premium event venues</p>
-        </div>
-        
-        <div class="vendors-filter">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="wedding">Wedding</button>
-            <button class="filter-btn" data-filter="corporate">Corporate</button>
-            <button class="filter-btn" data-filter="party">Party</button>
-        </div>
-
-        <div class="vendors-carousel">
-            <div class="vendor-card" data-category="wedding party">
-                <div class="vendor-profile">
-                    <img src="public/assets/Taiwo.jpg" alt="Sunset Gardens Profile">
-                    <div class="vendor-badge">Featured</div>
-                </div>
-                <div class="vendor-info">
-                    <h3>Sunset Gardens</h3>
-                    <div class="vendor-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                        <span>(4.5)</span>
-                    </div>
-                    <p class="location"><i class="fas fa-map-marker-alt"></i> Downtown, NYC</p>
-                    <p class="schedule"><i class="fas fa-clock"></i> Available Today</p>
-                    <p class="capacity"><i class="fas fa-users"></i> Up to 200 guests</p>
-                    <div class="vendor-price">
-                        <span class="price">$1000</span>
-                        <span class="period">/ day</span>
-                    </div>
-                    <button class="view-details-btn">View Details</button>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-container">
+            <div class="hero-content">
+                <h1>Your Perfect Venue, Just A Click Away</h1>
+                <p class="tagline">Discover. Book. Celebrate.</p>
+                <div class="hero-buttons">
+                    <a href="browse-vendors.html" class="btn btn-primary">Browse Venues</a>
+                    <a href="#how-it-works" class="btn btn-outline">Learn More</a>
                 </div>
             </div>
+        </section>
 
-            <div class="vendor-card" data-category="corporate wedding">
-                <div class="vendor-profile">
-                    <img src="public/assets/Taiwo.jpg" alt="Crystal Palace Profile">
-                    <div class="vendor-badge premium">Premium</div>
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="how-it-works-container">
+            <h2>How It Works</h2>
+            <div class="steps-container">
+                <div class="step-card">
+                    <h3>Step 1</h3>
+                    <div class="icon">
+                        <img src="public/assets/Step 1.png" alt="Search Location">
+                    </div>
+                    <h4>Search Location</h4>
+                    <p>Browse by location, capacity, or type of event to discover spaces that match your vision.</p>
                 </div>
-                <div class="vendor-info">
-                    <h3>Crystal Palace</h3>
-                    <div class="vendor-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <span>(5.0)</span>
+
+                <div class="step-card">
+                    <h3>Step 2</h3>
+                    <div class="icon">
+                        <img src="public/assets/Step 2.png" alt="Connect With Vendors">
                     </div>
-                    <p class="location"><i class="fas fa-map-marker-alt"></i> Upper East Side</p>
-                    <p class="schedule"><i class="fas fa-clock"></i> Open 9AM - 11PM</p>
-                    <p class="capacity"><i class="fas fa-users"></i> Up to 350 guests</p>
-                    <div class="vendor-price">
-                        <span class="price">$1500</span>
-                        <span class="period">/ day</span>
+                    <h4>Connect With Vendors</h4>
+                    <p>Reach out to event vendors, check availability, and finalize details-all in one place!</p>
+                </div>
+
+                <div class="step-card">
+                    <h3>Step 3</h3>
+                    <div class="icon">
+                        <img src="public/assets/Step 3.jpeg" alt="Book An Event">
                     </div>
-                    <button class="view-details-btn">View Details</button>
+                    <h4>Book An Event</h4>
+                    <p>Secure your venue with ease. Confirm your booking and start planning your event!</p>
                 </div>
             </div>
+        </section>
 
-            <div class="vendor-card" data-category="party corporate">
-                <div class="vendor-profile">
-                    <img src="public/assets/Taiwo.jpg" alt="Garden View Profile">
-                    <div class="vendor-badge">New</div>
+        <!-- Featured Vendors Section -->
+        <section class="vendors-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Explore Top Vendors</h2>
+                    <p class="section-description">Discover our hand-picked selection of premium event venues</p>
                 </div>
-                <div class="vendor-info">
-                    <h3>Garden View</h3>
-                    <div class="vendor-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <span>(4.0)</span>
+                
+                <div class="vendors-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="wedding">Wedding</button>
+                    <button class="filter-btn" data-filter="corporate">Corporate</button>
+                    <button class="filter-btn" data-filter="party">Party</button>
+                </div>
+
+                <div class="vendors-grid">
+                    <!-- Vendor Card 1 -->
+                    <div class="vendor-card" data-category="wedding">
+                        <div class="vendor-image">
+                            <img src="public/assets/vendors/vendor1.jpg" alt="Luxury Event Space" loading="lazy">
+                            <div class="vendor-overlay">
+                                <span class="vendor-price">From ₦500,000</span>
+                                <span class="vendor-location"><i class="fas fa-map-marker-alt"></i> Victoria Island, Lagos</span>
+                            </div>
+                        </div>
+                        <div class="vendor-info">
+                            <h3>The Grand Pavilion</h3>
+                            <div class="vendor-meta">
+                                <span class="capacity"><i class="fas fa-users"></i> Up to 500 guests</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.9 (128)</span>
+                                </div>
+                            </div>
+                            <p class="vendor-description">Luxurious event space perfect for weddings and grand celebrations</p>
+                            <a href="#" class="btn btn-outline">View Details</a>
+                        </div>
                     </div>
-                    <p class="location"><i class="fas fa-map-marker-alt"></i> Brooklyn</p>
-                    <p class="schedule"><i class="fas fa-clock"></i> Available Weekends</p>
-                    <p class="capacity"><i class="fas fa-users"></i> Up to 150 guests</p>
-                    <div class="vendor-price">
-                        <span class="price">$800</span>
-                        <span class="period">/ day</span>
+
+                    <!-- Vendor Card 2 -->
+                    <div class="vendor-card" data-category="corporate">
+                        <div class="vendor-image">
+                            <img src="public/assets/vendors/vendor2.jpg" alt="Corporate Event Center" loading="lazy">
+                            <div class="vendor-overlay">
+                                <span class="vendor-price">From ₦750,000</span>
+                                <span class="vendor-location"><i class="fas fa-map-marker-alt"></i> Ikoyi, Lagos</span>
+                            </div>
+                        </div>
+                        <div class="vendor-info">
+                            <h3>The Executive Hub</h3>
+                            <div class="vendor-meta">
+                                <span class="capacity"><i class="fas fa-users"></i> Up to 300 guests</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.8 (95)</span>
+                                </div>
+                            </div>
+                            <p class="vendor-description">Modern conference center ideal for corporate events and seminars</p>
+                            <a href="#" class="btn btn-outline">View Details</a>
+                        </div>
                     </div>
-                    <button class="view-details-btn">View Details</button>
+
+                    <!-- Vendor Card 3 -->
+                    <div class="vendor-card" data-category="party">
+                        <div class="vendor-image">
+                            <img src="public/assets/vendors/vendor3.jpg" alt="Party Venue" loading="lazy">
+                            <div class="vendor-overlay">
+                                <span class="vendor-price">From ₦300,000</span>
+                                <span class="vendor-location"><i class="fas fa-map-marker-alt"></i> Lekki, Lagos</span>
+                            </div>
+                        </div>
+                        <div class="vendor-info">
+                            <h3>The Celebration Place</h3>
+                            <div class="vendor-meta">
+                                <span class="capacity"><i class="fas fa-users"></i> Up to 200 guests</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.7 (156)</span>
+                                </div>
+                            </div>
+                            <p class="vendor-description">Vibrant venue perfect for birthday parties and social gatherings</p>
+                            <a href="#" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Vendor Card 4 -->
+                    <div class="vendor-card" data-category="wedding">
+                        <div class="vendor-image">
+                            <img src="public/assets/vendors/vendor4.jpg" alt="Garden Wedding Venue" loading="lazy">
+                            <div class="vendor-overlay">
+                                <span class="vendor-price">From ₦600,000</span>
+                                <span class="vendor-location"><i class="fas fa-map-marker-alt"></i> Ikeja, Lagos</span>
+                            </div>
+                        </div>
+                        <div class="vendor-info">
+                            <h3>The Garden Palace</h3>
+                            <div class="vendor-meta">
+                                <span class="capacity"><i class="fas fa-users"></i> Up to 400 guests</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.9 (142)</span>
+                                </div>
+                            </div>
+                            <p class="vendor-description">Beautiful garden venue perfect for outdoor weddings and receptions</p>
+                            <a href="#" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Vendor Card 5 -->
+                    <div class="vendor-card" data-category="corporate">
+                        <div class="vendor-image">
+                            <img src="public/assets/vendors/vendor5.jpg" alt="Business Conference Center" loading="lazy">
+                            <div class="vendor-overlay">
+                                <span class="vendor-price">From ₦450,000</span>
+                                <span class="vendor-location"><i class="fas fa-map-marker-alt"></i> Maryland, Lagos</span>
+                            </div>
+                        </div>
+                        <div class="vendor-info">
+                            <h3>The Business Hub</h3>
+                            <div class="vendor-meta">
+                                <span class="capacity"><i class="fas fa-users"></i> Up to 250 guests</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.8 (118)</span>
+                                </div>
+                            </div>
+                            <p class="vendor-description">Professional venue for business meetings and conferences</p>
+                            <a href="#" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Vendor Card 6 -->
+                    <div class="vendor-card" data-category="party">
+                        <div class="vendor-image">
+                            <img src="public/assets/vendors/vendor6.jpg" alt="Entertainment Hall" loading="lazy">
+                            <div class="vendor-overlay">
+                                <span class="vendor-price">From ₦350,000</span>
+                                <span class="vendor-location"><i class="fas fa-map-marker-alt"></i> Surulere, Lagos</span>
+                            </div>
+                        </div>
+                        <div class="vendor-info">
+                            <h3>The Entertainment Hub</h3>
+                            <div class="vendor-meta">
+                                <span class="capacity"><i class="fas fa-users"></i> Up to 180 guests</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.7 (89)</span>
+                                </div>
+                            </div>
+                            <p class="vendor-description">Modern entertainment venue for parties and social events</p>
+                            <a href="#" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vendors-footer">
+                    <a href="browse-vendors.html" class="btn btn-primary">View All Vendors <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
+        </section>
 
-            <div class="vendor-card" data-category="wedding corporate">
-                <div class="vendor-profile">
-                    <img src="public/assets/Taiwo.jpg" alt="Royal Plaza Profile">
-                    <div class="vendor-badge premium">Premium</div>
-                </div>
-                <div class="vendor-info">
-                    <h3>Royal Plaza</h3>
-                    <div class="vendor-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                        <span>(4.7)</span>
+        <!-- Why Choose Us Section -->
+        <section class="why-choose">
+            <div class="why-choose-content">
+                <h2>Why Choose TOFIMOTIA?</h2>
+                <p>We understand the importance of finding the perfect venue for your special events. Our platform connects you with premium venues and experienced vendors, making the booking process seamless and stress-free.</p>
+                <p>Whether you're planning a wedding, corporate event, or private celebration, we’re here to help you create unforgettable moments.</p>
+                <a href="about.html" class="btn btn-primary">Learn More</a>
+            </div>
+            <div class="why-choose-images">
+                <img src="public/assets/Grid Image.jpg" alt="Event Venues Collection" class="grid-img">
+            </div>
+        </section>
+
+        <!-- Customization Tool Section -->
+        <section class="customization-tool">
+            <div class="tool-content">
+                <h2>Venue Customization Tool</h2>
+                <p class="tool-description">Design your perfect event space with our intuitive customization tool. Personalize layouts, add decorations, and visualize your dream venue before booking.</p>
+                <ul class="tool-features">
+                    <li><i class="fas fa-vector-square"></i><span>Layout Design</span></li>
+                    <li><i class="fas fa-paint-brush"></i><span>Decoration Personalization</span></li>
+                    <li><i class="fas fa-cube"></i><span>Add Amenities</span></li>
+                </ul>
+                <button class="btn btn-primary">Try It Now</button>
+            </div>
+            <div class="tool-image">
+                <img src="public/assets/Customization tool Image.jpg" alt="Venue Customization Tool">
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="container">
+                <h2 class="section-title">Voices That Inspire Us</h2>
+                <p class="section-description">Hear from our amazing customers about their journey with TOFIMOTIA</p>
+                
+                <div class="testimonials-grid">
+                    <!-- Testimonial Card 1 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-image">
+                                <img src="public/assets/testimonials/user1.jpg" alt="Sarah Johnson" loading="lazy">
+                            </div>
+                            <div class="testimonial-info">
+                                <h3>Sarah Johnson</h3>
+                                <p class="event-type">Wedding Celebration</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"TOFIMOTIA made finding our dream wedding venue absolutely seamless! The platform's detailed search filters and virtual tours helped us discover the perfect space without leaving our home."</p>
                     </div>
-                    <p class="location"><i class="fas fa-map-marker-alt"></i> Manhattan</p>
-                    <p class="schedule"><i class="fas fa-clock"></i> 24/7 Available</p>
-                    <p class="capacity"><i class="fas fa-users"></i> Up to 500 guests</p>
-                    <div class="vendor-price">
-                        <span class="price">$2000</span>
-                        <span class="period">/ day</span>
+
+                    <!-- Testimonial Card 2 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-image">
+                                <img src="public/assets/testimonials/user2.jpg" alt="Michael Chen" loading="lazy">
+                            </div>
+                            <div class="testimonial-info">
+                                <h3>Michael Chen</h3>
+                                <p class="event-type">Corporate Conference</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"As an event planner, I've used many platforms, but TOFIMOTIA stands out. The vendor communication tools and detailed venue information make my job so much easier."</p>
                     </div>
-                    <button class="view-details-btn">View Details</button>
+
+                    <!-- Testimonial Card 3 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-image">
+                                <img src="public/assets/testimonials/user3.jpg" alt="Aisha Patel" loading="lazy">
+                            </div>
+                            <div class="testimonial-info">
+                                <h3>Aisha Patel</h3>
+                                <p class="event-type">Birthday Celebration</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"Planning my daughter's sweet 16 was a breeze with TOFIMOTIA. The customization tool helped us visualize the space, and the vendor recommendations were spot-on!"</p>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="vendor-card" data-category="party">
-                <div class="vendor-profile">
-                    <img src="public/assets/Taiwo.jpg" alt="Skyline Lounge Profile">
-                    <div class="vendor-badge">Featured</div>
-                </div>
-                <div class="vendor-info">
-                    <h3>Skyline Lounge</h3>
-                    <div class="vendor-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <span>(4.9)</span>
-                    </div>
-                    <p class="location"><i class="fas fa-map-marker-alt"></i> Financial District</p>
-                    <p class="schedule"><i class="fas fa-clock"></i> Evening Events</p>
-                    <p class="capacity"><i class="fas fa-users"></i> Up to 200 guests</p>
-                    <div class="vendor-price">
-                        <span class="price">$1800</span>
-                        <span class="period">/ day</span>
-                    </div>
-                    <button class="view-details-btn">View Details</button>
-                </div>
-            </div>
+    </main>
 
-            <div class="vendor-card" data-category="wedding">
-                <div class="vendor-profile">
-                    <img src="public/assets/Taiwo.jpg" alt="Riverside Manor Profile">
-                    <div class="vendor-badge">New</div>
-                </div>
-                <div class="vendor-info">
-                    <h3>Riverside Manor</h3>
-                    <div class="vendor-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <span>(4.2)</span>
-                    </div>
-                    <p class="location"><i class="fas fa-map-marker-alt"></i> Hudson River</p>
-                    <p class="schedule"><i class="fas fa-clock"></i> Seasonal Booking</p>
-                    <p class="capacity"><i class="fas fa-users"></i> Up to 300 guests</p>
-                    <div class="vendor-price">
-                        <span class="price">$1600</span>
-                        <span class="period">/ day</span>
-                    </div>
-                    <button class="view-details-btn">View Details</button>
-                </div>
-            </div>
+    <!-- Footer -->
+    <div id="footer-container"></div>
 
-            <div class="vendor-card" data-category="corporate party">
-                <div class="vendor-profile">
-                    <img src="public/assets/Taiwo.jpg" alt="Tech Hub Venue Profile">
-                    <div class="vendor-badge">Featured</div>
-                </div>
-                <div class="vendor-info">
-                    <h3>Tech Hub Venue</h3>
-                    <div class="vendor-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                        <span>(4.6)</span>
-                    </div>
-                    <p class="location"><i class="fas fa-map-marker-alt"></i> Silicon Alley</p>
-                    <p class="schedule"><i class="fas fa-clock"></i> Flexible Hours</p>
-                    <p class="capacity"><i class="fas fa-users"></i> Up to 250 guests</p>
-                    <div class="vendor-price">
-                        <span class="price">$1200</span>
-                        <span class="period">/ day</span>
-                    </div>
-                    <button class="view-details-btn">View Details</button>
-                </div>
-            </div>
-
-            <div class="vendor-card" data-category="wedding party">
-                <div class="vendor-profile">
-                    <img src="public/assets/Taiwo.jpg" alt="Vintage Ballroom Profile">
-                    <div class="vendor-badge premium">Premium</div>
-                </div>
-                <div class="vendor-info">
-                    <h3>Vintage Ballroom</h3>
-                    <div class="vendor-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <span>(4.8)</span>
-                    </div>
-                    <p class="location"><i class="fas fa-map-marker-alt"></i> Historic District</p>
-                    <p class="schedule"><i class="fas fa-clock"></i> By Appointment</p>
-                    <p class="capacity"><i class="fas fa-users"></i> Up to 400 guests</p>
-                    <div class="vendor-price">
-                        <span class="price">$2200</span>
-                        <span class="period">/ day</span>
-                    </div>
-                    <button class="view-details-btn">View Details</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="carousel-controls">
-            <button class="prev-btn" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
-            <button class="next-btn" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
-        </div>
-
-        <div class="vendors-footer">
-            <button class="view-all-btn">View All Vendors <i class="fas fa-arrow-right"></i></button>
-        </div>
-    </section>
-
-    <section class="why-choose">
-        <div class="why-choose-content">
-            <h2>Why Choose TOFIMOTIA?</h2>
-            <p>We understand the importance of finding the perfect venue for your special events. Our platform connects you with premium venues and experienced vendors, making the booking process seamless and stress-free.</p>
-            <p>Whether you're planning a wedding, corporate event, or private celebration, we’re here to help you create unforgettable moments.</p>
-            <button class="learn-more-btn">Learn more</button>
-        </div>
-        <div class="why-choose-images">
-            <img src="public/assets/Grid Image.jpg" alt="Event Venues Collection" class="grid-img">
-        </div>
-    </section>
-
-    <section class="customization-tool">
-        <div class="tool-content">
-            <h2>Venue Customization Tool</h2>
-            <p class="tool-description">Design your perfect event space with our intuitive customization tool. Personalize layouts, add decorations, and visualize your dream venue before booking.</p>
-            <ul class="tool-features">
-                <li>
-                    <i class="fas fa-vector-square"></i>
-                    <span>Layout Design</span>
-                </li>
-                <li>
-                    <i class="fas fa-paint-brush"></i>
-                    <span>Decoration Personalization</span>
-                </li>
-                <li>
-                    <i class="fas fa-cube"></i>
-                    <span>Add Amenities</span>
-                </li>
-            </ul>
-            <button class="use-tool-btn">Use Tool</button>
-        </div>
-        <div class="tool-image">
-            <img src="public/assets/Customization tool Image.jpg" alt="Venue Customization Tool">
-        </div>
-    </section>
-
-    <section class="testimonials">
-        <h2 class="section-title">Voices That Inspire Us</h2>
-        <div class="testimonials-container">
-            <div class="testimonial-card">
-                <div class="quote-icon">
-                    <i class="fas fa-quote-left"></i>
-                </div>
-                <p class="testimonial-text">
-                    "The venue was absolutely perfect for our wedding. The customization tools made planning so much easier, and the staff was incredibly helpful throughout the process."
-                </p>
-                <h3 class="customer-name">Sarah Johnson</h3>
-                <p class="customer-location">New York, USA</p>
-            </div>
-
-            <div class="testimonial-card">
-                <div class="quote-icon">
-                    <i class="fas fa-quote-left"></i>
-                </div>
-                <p class="testimonial-text">
-                    "I couldn't have asked for a better platform to find and book our corporate event venue. The process was seamless from start to finish."
-                </p>
-                <h3 class="customer-name">Michael Chen</h3>
-                <p class="customer-location">San Francisco, USA</p>
-            </div>
-
-            <div class="testimonial-card">
-                <div class="quote-icon">
-                    <i class="fas fa-quote-left"></i>
-                </div>
-                <p class="testimonial-text">
-                    "The attention to detail and customer service was outstanding. Our anniversary celebration was exactly how we envisioned it."
-                </p>
-                <h3 class="customer-name">Emily Parker</h3>
-                <p class="customer-location">Chicago, USA</p>
-            </div>
-        </div>
-        <div class="testimonial-pagination">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
-    </section>
-
-   
-    <div id="footer-placeholder"></div>
-  </div>
-  <script src="script.js"></script>
-  <script src="vendors.js"></script>
-  <script src="loadFooter.js"></script>
+    <!-- Scripts -->
+    <script src="js/loadHeader.js"></script>
+    <script src="js/loadFooter.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
