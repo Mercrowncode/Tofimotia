@@ -45,7 +45,7 @@ function initializeHeader() {
     const header = document.querySelector('.header');
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const mobileMenu = document.querySelector('.mobile-menu');
-    const dropdownBtns = document.querySelectorAll('.mobile-dropbtn');
+    const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
 
     // Toggle mobile menu
     if (mobileMenuBtn && mobileMenu) {
@@ -54,15 +54,34 @@ function initializeHeader() {
             mobileMenu.classList.toggle('active');
             document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
         });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target) && mobileMenu.classList.contains('active')) {
+                mobileMenuBtn.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
     }
 
     // Handle mobile dropdowns
-    dropdownBtns.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            e.preventDefault();
-            const dropdown = btn.closest('.mobile-dropdown');
-            dropdown.classList.toggle('active');
-        });
+    mobileDropdowns.forEach(dropdown => {
+        const dropdownBtn = dropdown.querySelector('.mobile-dropbtn');
+        const dropdownContent = dropdown.querySelector('.mobile-dropdown-content');
+
+        if (dropdownBtn && dropdownContent) {
+            dropdownBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                // Close other dropdowns
+                mobileDropdowns.forEach(otherDropdown => {
+                    if (otherDropdown !== dropdown) {
+                        otherDropdown.classList.remove('active');
+                    }
+                });
+                dropdown.classList.toggle('active');
+            });
+        }
     });
 
     // Set active nav link
