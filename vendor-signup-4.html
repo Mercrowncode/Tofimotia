@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Details - TOFIMOTIA Vendor Sign Up</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/vendor-signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="signup-container">
+        <div class="signup-card">
+            <!-- Left Side - Visual & Branding -->
+            <div class="signup-visual">
+                <div class="logo-container">
+                    <img src="public/assets/Logo.png" alt="TOFIMOTIA Logo" class="logo">
+                </div>
+            </div>
+
+            <!-- Right Side - Work Details Form -->
+            <div class="signup-form-container">
+                <div class="signup-form-wrapper">
+                    <h1>Work Details</h1>
+                    <p class="subtitle">Let's showcase your work</p>
+
+                    <form id="vendor-signup-form" class="signup-form">
+                        <div class="form-step" data-step="4">
+                            <!-- Profile Image Upload -->
+                            <div class="profile-upload-section">
+                                <div class="profile-upload-container">
+                                    <input type="file" id="profile-image" name="profile-image" accept="image/*" class="profile-input">
+                                    <div class="profile-placeholder">
+                                        <i class="fas fa-camera"></i>
+                                        <span>Add Image</span>
+                                    </div>
+                                </div>
+                                <p class="upload-hint">Upload a professional photo</p>
+                            </div>
+
+                            <!-- Portfolio Upload -->
+                            <div class="form-group">
+                                <label>Portfolio</label>
+                                <div class="file-upload-container">
+                                    <input type="file" id="portfolio" name="portfolio" multiple accept=".pdf,image/*" class="file-input">
+                                    <div class="upload-placeholder">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                        <span>Upload Portfolio</span>
+                                        <p class="upload-hint">Drag & drop files or click to browse</p>
+                                        <p class="file-types">Accepts PDFs and Images</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Availability Section -->
+                            <div class="availability-section">
+                                <label>Availability</label>
+                                <div class="form-row">
+                                    <div class="form-group flex-1">
+                                        <select id="days" name="days" multiple required>
+                                            <option value="monday">Monday</option>
+                                            <option value="tuesday">Tuesday</option>
+                                            <option value="wednesday">Wednesday</option>
+                                            <option value="thursday">Thursday</option>
+                                            <option value="friday">Friday</option>
+                                            <option value="saturday">Saturday</option>
+                                            <option value="sunday">Sunday</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group flex-1">
+                                        <div class="time-range">
+                                            <select id="start-time" name="start-time" required>
+                                                <option value="" disabled selected>Start Time</option>
+                                                <option value="08:00">8:00 AM</option>
+                                                <option value="09:00">9:00 AM</option>
+                                                <option value="10:00">10:00 AM</option>
+                                                <option value="11:00">11:00 AM</option>
+                                                <option value="12:00">12:00 PM</option>
+                                            </select>
+                                            <span class="time-separator">to</span>
+                                            <select id="end-time" name="end-time" required>
+                                                <option value="" disabled selected>End Time</option>
+                                                <option value="17:00">5:00 PM</option>
+                                                <option value="18:00">6:00 PM</option>
+                                                <option value="19:00">7:00 PM</option>
+                                                <option value="20:00">8:00 PM</option>
+                                                <option value="21:00">9:00 PM</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Social Links -->
+                            <div class="form-group">
+                                <label for="social-links">Website or Social Media Links</label>
+                                <div class="social-links-container">
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-link"></i>
+                                        <input type="text" id="social-links" name="social-links" 
+                                               placeholder="Add Links (e.g., Instagram, LinkedIn, Portfolio)">
+                                    </div>
+                                    <button type="button" class="btn btn-outline btn-sm" id="add-link">
+                                        <i class="fas fa-plus"></i> Add Another Link
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Terms Agreement -->
+                            <div class="form-group">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" id="terms-agreement" name="terms-agreement" required>
+                                    <span class="checkmark"></span>
+                                    <span class="checkbox-label">
+                                        I agree to the <a href="#" class="text-accent">Terms and Conditions</a>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <!-- Progress Indicator -->
+                            <div class="progress-indicator">
+                                <div class="step completed">1</div>
+                                <div class="step-line completed"></div>
+                                <div class="step completed">2</div>
+                                <div class="step-line completed"></div>
+                                <div class="step completed">3</div>
+                                <div class="step-line completed"></div>
+                                <div class="step active">4</div>
+                            </div>
+
+                            <!-- Form Actions -->
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-secondary" onclick="window.location.href='vendor-signup-3.html'">Back</button>
+                                <button type="submit" class="btn btn-primary" id="create-account">Create Account</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/vendor-signup.js"></script>
+</body>
+</html>

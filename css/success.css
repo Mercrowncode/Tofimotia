@@ -1,0 +1,240 @@
+/* Success Page Styles */
+.success-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-2xl);
+    background: var(--gray-50);
+}
+
+.success-card {
+    display: flex;
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+    width: 100%;
+    max-width: 1000px;
+    min-height: 600px;
+    overflow: hidden;
+}
+
+/* Left Side - Visual */
+.success-visual {
+    position: relative;
+    flex: 0 0 400px;
+    background: linear-gradient(135deg, var(--accent-color) 0%, #6D1D1F 100%);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-2xl);
+}
+
+.logo-container {
+    position: absolute;
+    top: var(--spacing-2xl);
+    left: var(--spacing-2xl);
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+}
+
+.confetti-image {
+    width: 80%;
+    height: auto;
+    opacity: 0.6;
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Right Side - Content */
+.success-content {
+    flex: 1;
+    padding: var(--spacing-3xl);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.success-icon {
+    margin-bottom: var(--spacing-xl);
+    animation: scaleIn 0.5s ease-out;
+}
+
+.success-content h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+    animation: fadeInUp 0.5s ease-out 0.2s both;
+}
+
+.message {
+    font-size: 1.125rem;
+    color: var(--gray-600);
+    margin-bottom: var(--spacing-2xl);
+    animation: fadeInUp 0.5s ease-out 0.4s both;
+}
+
+/* Next Steps Section */
+.next-steps {
+    width: 100%;
+    margin-top: var(--spacing-xl);
+    animation: fadeInUp 0.5s ease-out 0.6s both;
+}
+
+.next-steps h2 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xl);
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.step-item {
+    text-align: center;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    background: var(--gray-50);
+    transition: all 0.3s ease;
+}
+
+.step-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.step-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-md);
+    color: var(--accent-color);
+    font-size: 1.25rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.step-item h3 {
+    font-size: 1rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.step-item p {
+    font-size: 0.875rem;
+    color: var(--gray-600);
+    line-height: 1.5;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-2xl);
+    animation: fadeInUp 0.5s ease-out 0.8s both;
+}
+
+.action-buttons .btn {
+    min-width: 160px;
+}
+
+/* Animations */
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .success-card {
+        max-width: 800px;
+    }
+
+    .success-visual {
+        flex: 0 0 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .success-container {
+        padding: var(--spacing-xl);
+    }
+
+    .success-card {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .success-visual {
+        height: 200px;
+    }
+
+    .success-content {
+        padding: var(--spacing-xl);
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .action-buttons .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .success-container {
+        padding: var(--spacing-lg);
+    }
+
+    .success-content h1 {
+        font-size: 2rem;
+    }
+
+    .message {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,200 @@
+/* Select Account Page Styles */
+
+/* Hero Section */
+.select-hero {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    background: linear-gradient(rgba(18, 18, 19, 0.4), rgba(44, 62, 80, 0.4)), url('../public/assets/Outdoor venue.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 var(--spacing-3xl);
+    margin-top: var(--header-height);
+}
+
+.hero-content {
+    color: var(--white);
+    max-width: 650px;
+    text-align: left;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-md);
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    max-width: 550px;
+}
+
+/* Account Selection Section */
+.account-selection {
+    padding: var(--spacing-3xl) var(--spacing-2xl);
+    background-color: var(--white);
+}
+
+.account-selection h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.account-types {
+    display: flex;
+    gap: var(--spacing-2xl);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-xl);
+}
+
+/* Account Card */
+.account-card {
+    flex: 1;
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-2xl);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.3s ease;
+}
+
+.account-card:hover {
+    transform: translateY(-5px);
+}
+
+.account-icon {
+    width: 120px;
+    height: 120px;
+    background: var(--gray-100);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.account-icon img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.account-card h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xl);
+    font-weight: 600;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--spacing-xl);
+    text-align: left;
+}
+
+.features-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--gray-700);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.features-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.account-card .btn {
+    margin-top: auto;
+    width: 100%;
+    padding: var(--spacing-md) var(--spacing-2xl);
+}
+
+.signin-link {
+    margin-top: var(--spacing-md);
+    font-size: 0.875rem;
+    color: var(--gray-600);
+}
+
+.signin-link a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signin-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .select-hero {
+        padding: 0 var(--spacing-xl);
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .account-types {
+        padding: 0 var(--spacing-md);
+    }
+}
+
+@media (max-width: 768px) {
+    .select-hero {
+        height: 50vh;
+        padding: 0 var(--spacing-lg);
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.125rem;
+    }
+
+    .account-types {
+        flex-direction: column;
+        gap: var(--spacing-xl);
+    }
+
+    .account-card {
+        padding: var(--spacing-xl);
+    }
+}
+
+@media (max-width: 480px) {
+    .select-hero {
+        height: 40vh;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .account-selection h2 {
+        font-size: 2rem;
+    }
+}

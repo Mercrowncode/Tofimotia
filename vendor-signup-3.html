@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Details - TOFIMOTIA Vendor Sign Up</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/vendor-signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="signup-container">
+        <div class="signup-card">
+            <!-- Left Side - Visual & Branding -->
+            <div class="signup-visual">
+                <div class="logo-container">
+                    <img src="public/assets/Logo.png" alt="TOFIMOTIA Logo" class="logo">
+                </div>
+            </div>
+
+            <!-- Right Side - Payment Details Form -->
+            <div class="signup-form-container">
+                <div class="signup-form-wrapper">
+                    <h1>Payment Details</h1>
+                    <p class="subtitle">Set up your payment preferences</p>
+
+                    <form id="vendor-signup-form" class="signup-form">
+                        <div class="form-step" data-step="3">
+                            <!-- Payment Method Selection -->
+                            <div class="form-group">
+                                <label>Payment Method</label>
+                                <div class="payment-methods">
+                                    <label class="payment-method-option">
+                                        <input type="radio" name="payment-method" value="bank" checked>
+                                        <span class="radio-content">
+                                            <i class="fas fa-university"></i>
+                                            <span>Bank Transfer</span>
+                                        </span>
+                                    </label>
+                                    <label class="payment-method-option">
+                                        <input type="radio" name="payment-method" value="mobile">
+                                        <span class="radio-content">
+                                            <i class="fas fa-mobile-alt"></i>
+                                            <span>Mobile Money</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Bank Details Section -->
+                            <div id="bank-details" class="payment-details-section">
+                                <div class="form-group">
+                                    <label for="bank-name">Bank Name</label>
+                                    <select id="bank-name" name="bank-name" required>
+                                        <option value="" disabled selected>Select your bank</option>
+                                        <option value="access">Access Bank</option>
+                                        <option value="gtb">Guaranty Trust Bank</option>
+                                        <option value="zenith">Zenith Bank</option>
+                                        <option value="first">First Bank</option>
+                                        <option value="uba">UBA</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="account-number">Account Number</label>
+                                    <input type="text" id="account-number" name="account-number" placeholder="Enter your account number" required>
+                                </div>
+                            </div>
+
+                            <!-- Automatic Payout Toggle -->
+                            <div class="form-group">
+                                <div class="toggle-container">
+                                    <label class="toggle-label">
+                                        <span>Enable Automatic Payouts</span>
+                                        <div class="toggle-switch">
+                                            <input type="checkbox" id="auto-payout" name="auto-payout">
+                                            <span class="toggle-slider"></span>
+                                        </div>
+                                    </label>
+                                    <small class="toggle-description">Receive payments automatically when bookings are completed</small>
+                                </div>
+                            </div>
+
+                            <!-- Summary Section -->
+                            <div class="summary-section">
+                                <h3>Review Your Details</h3>
+                                <div class="summary-content">
+                                    <div class="summary-group">
+                                        <h4>Business Information</h4>
+                                        <p><strong>Business Name:</strong> <span id="summary-business-name">Loading...</span></p>
+                                        <p><strong>Category:</strong> <span id="summary-category">Loading...</span></p>
+                                        <p><strong>Location:</strong> <span id="summary-location">Loading...</span></p>
+                                    </div>
+                                    <div class="summary-group">
+                                        <h4>Contact Information</h4>
+                                        <p><strong>Name:</strong> <span id="summary-full-name">Loading...</span></p>
+                                        <p><strong>Email:</strong> <span id="summary-email">Loading...</span></p>
+                                        <p><strong>Phone:</strong> <span id="summary-phone">Loading...</span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Terms Agreement -->
+                            <div class="form-group">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" id="terms-agreement" name="terms-agreement" required>
+                                    <span class="checkmark"></span>
+                                    <span class="checkbox-label">
+                                        I agree to the <a href="#" class="text-accent">payment terms</a> and confirm that all provided information is accurate
+                                    </span>
+                                </label>
+                            </div>
+
+                            <!-- Progress Indicator -->
+                            <div class="progress-indicator">
+                                <div class="step completed">1</div>
+                                <div class="step-line completed"></div>
+                                <div class="step completed">2</div>
+                                <div class="step-line completed"></div>
+                                <div class="step active">3</div>
+                            </div>
+
+                            <!-- Form Actions -->
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-secondary" onclick="window.location.href='vendor-signup-2.html'">Back</button>
+                                <button type="submit" class="btn btn-primary" id="submit-form">Submit & Complete</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/vendor-signup.js"></script>
+</body>
+</html>

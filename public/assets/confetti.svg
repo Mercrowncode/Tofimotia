@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Party Popper -->
+    <path d="M60 70L40 90L35 85L55 65L60 70Z" fill="#9A272A"/>
+    <path d="M35 85L30 95L40 90L35 85Z" fill="#2C3E50"/>
+    
+    <!-- Confetti Pieces -->
+    <circle cx="65" cy="45" r="3" fill="#9A272A"/>
+    <circle cx="75" cy="55" r="2" fill="#2C3E50"/>
+    <circle cx="45" cy="35" r="2" fill="#9A272A"/>
+    <rect x="70" y="40" width="4" height="4" transform="rotate(45)" fill="#2C3E50"/>
+    <rect x="50" y="30" width="4" height="4" transform="rotate(-30)" fill="#9A272A"/>
+    <rect x="80" y="50" width="3" height="3" transform="rotate(15)" fill="#2C3E50"/>
+    
+    <!-- Stars -->
+    <path d="M85 35L87 37L89 35L87 33L85 35Z" fill="#9A272A"/>
+    <path d="M45 55L47 57L49 55L47 53L45 55Z" fill="#2C3E50"/>
+    <path d="M65 25L67 27L69 25L67 23L65 25Z" fill="#9A272A"/>
+    
+    <!-- Streamers -->
+    <path d="M55 45C55 45 60 40 65 45" stroke="#9A272A" stroke-width="1.5" fill="none"/>
+    <path d="M75 35C75 35 80 30 85 35" stroke="#2C3E50" stroke-width="1.5" fill="none"/>
+    <path d="M45 65C45 65 50 60 55 65" stroke="#9A272A" stroke-width="1.5" fill="none"/>
+</svg>

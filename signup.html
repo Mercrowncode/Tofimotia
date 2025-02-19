@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - TOFIMOTIA</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="signup-container">
+        <div class="signup-card">
+            <!-- Left Side - Visual & Branding -->
+            <div class="signup-visual">
+                <div class="logo-container">
+                    <img src="public/assets/Logo.png" alt="TOFIMOTIA Logo" class="logo">
+                </div>
+                <div class="overlay"></div>
+            </div>
+
+            <!-- Right Side - Signup Form -->
+            <div class="signup-form-container">
+                <div class="signup-form-wrapper">
+                    <h1>Plan. Book. Celebrate!</h1>
+                    <p class="subtitle">Sign up to access top event venues and vendors.</p>
+
+                    <form class="signup-form" id="signupForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Email Address" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Password" required>
+                            <p class="password-hint">Minimum of 8 characters, mix of letters and numbers.</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+                        </div>
+
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">I agree to the Terms and Conditions</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+
+                        <div class="divider">
+                            <span>OR</span>
+                        </div>
+
+                        <div class="social-signup">
+                            <button type="button" class="btn btn-social btn-apple">
+                                <i class="fab fa-apple"></i>
+                                Sign up with Apple
+                            </button>
+                            <button type="button" class="btn btn-social btn-google">
+                                <img src="public/assets/google-icon.svg" alt="Google">
+                                Sign up with Google
+                            </button>
+                        </div>
+
+                        <p class="login-link">
+                            Already have an account? <a href="signin.html">Sign In</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

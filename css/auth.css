@@ -1,0 +1,319 @@
+/* Auth Pages Styles */
+.signup-container {
+    min-height: 100vh;
+    background-color: var(--gray-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-xl);
+}
+
+/* Signup Card */
+.signup-card {
+    display: flex;
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+    width: 100%;
+    max-width: 1000px;
+    max-height: 90vh;
+    overflow: hidden;
+}
+
+/* Left Side - Visual & Branding */
+.signup-visual {
+    position: relative;
+    width: 400px;
+    background: var(--accent-color);
+    background-image: url('../public/assets/auth-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-start;
+    padding: var(--spacing-xl);
+}
+
+.signup-visual .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(154, 39, 42, 0.4), rgba(44, 62, 80, 0.6));
+}
+
+.logo-container {
+    position: relative;
+    z-index: 2;
+}
+
+.logo-container img {
+    height: 40px;
+    width: auto;
+}
+
+/* Right Side - Signup Form */
+.signup-form-container {
+    flex: 1;
+    padding: var(--spacing-xl);
+    background-color: var(--white);
+    max-width: 600px;
+    overflow-y: auto;
+}
+
+.signup-form-wrapper {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.signup-form-wrapper h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xs);
+    font-weight: 700;
+}
+
+.subtitle {
+    color: var(--gray-600);
+    margin-bottom: var(--spacing-xl);
+    font-size: var(--body-size);
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.form-row {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.form-group label {
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="password"] {
+    padding: 0.625rem;
+    border: 1px solid var(--gray-300);
+    border-radius: var(--border-radius-sm);
+    font-size: 0.875rem;
+    transition: border-color var(--transition-normal);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.password-hint {
+    font-size: 0.75rem;
+    color: var(--gray-500);
+    margin-top: -0.25rem;
+}
+
+.checkbox {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-top: -0.25rem;
+}
+
+.checkbox input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--gray-300);
+    border-radius: 4px;
+}
+
+.btn-block {
+    width: 100%;
+    padding: 0.625rem var(--spacing-xl);
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.divider {
+    position: relative;
+    text-align: center;
+    margin: var(--spacing-md) 0;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: calc(50% - 30px);
+    height: 1px;
+    background-color: var(--gray-300);
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+.divider span {
+    background-color: var(--white);
+    padding: 0 var(--spacing-md);
+    color: var(--gray-500);
+    font-size: 0.75rem;
+}
+
+.social-signup {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.btn-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+    background-color: var(--white);
+    border: 1px solid var(--gray-300);
+    color: var(--primary-color);
+    padding: 0.625rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: background-color var(--transition-normal);
+}
+
+.btn-social:hover {
+    background-color: var(--gray-100);
+}
+
+.btn-social img,
+.btn-social i {
+    width: 18px;
+    height: 18px;
+}
+
+.login-link {
+    text-align: center;
+    color: var(--gray-600);
+    margin-top: var(--spacing-md);
+    font-size: 0.875rem;
+}
+
+.login-link a {
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+/* Signin specific styles */
+.password-group {
+    position: relative;
+}
+
+.forgot-password {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: var(--accent-color);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.social-signin {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.social-signin .btn-social {
+    flex: 1;
+}
+
+.signup-link {
+    text-align: center;
+    color: var(--gray-600);
+    margin-top: var(--spacing-xl);
+    font-size: 0.875rem;
+}
+
+.signup-link a {
+    color: var(--accent-color);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .signup-container {
+        padding: var(--spacing-md);
+        align-items: flex-start;
+    }
+
+    .signup-card {
+        flex-direction: column;
+        max-width: 100%;
+        max-height: none;
+        margin: var(--spacing-md) 0;
+    }
+
+    .signup-visual {
+        width: 100%;
+        height: 100px;
+        padding: var(--spacing-md);
+    }
+
+    .signup-form-container {
+        padding: var(--spacing-lg);
+        max-height: none;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .signup-form-wrapper h1 {
+        font-size: 1.75rem;
+    }
+
+    .social-signin {
+        flex-direction: column;
+    }
+}
+
+/* Tablet Responsiveness */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .signup-container {
+        padding: var(--spacing-xl);
+    }
+
+    .signup-card {
+        max-width: 800px;
+        max-height: 95vh;
+    }
+
+    .signup-visual {
+        width: 300px;
+    }
+}

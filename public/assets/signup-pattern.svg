@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="800" viewBox="0 0 600 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Large C shape -->
+    <path d="M400 400 A200 200 0 1 1 400 399.9" stroke="rgba(255, 255, 255, 0.1)" stroke-width="40"/>
+    
+    <!-- Circles -->
+    <circle cx="500" cy="200" r="80" fill="rgba(255, 255, 255, 0.1)"/>
+    <circle cx="100" cy="300" r="120" fill="rgba(255, 255, 255, 0.1)"/>
+    <circle cx="450" cy="600" r="100" fill="rgba(255, 255, 255, 0.1)"/>
+    <circle cx="200" cy="700" r="60" fill="rgba(255, 255, 255, 0.1)"/>
+</svg>

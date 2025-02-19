@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started - TOFIMOTIA</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/select-account.css">
+</head>
+<body>
+    <!-- Header will be loaded here -->
+    <div id="header-container"></div>
+
+    <!-- Hero Section -->
+    <section class="select-hero">
+        <div class="hero-content">
+            <h1>Get started with the perfect account for you!</h1>
+            <p>Organizers plan events seamlessly, while vendors showcase services to bring events to life.</p>
+        </div>
+    </section>
+
+    <!-- Account Selection Section -->
+    <section class="account-selection">
+        <h2>Get Started</h2>
+        
+        <div class="account-types">
+            <!-- Event Organizer Card -->
+            <div class="account-card">
+                <div class="account-icon">
+                    <img src="public/assets/organizer-icon.svg" alt="Event Organizer">
+                </div>
+                <h3>Event Organizer</h3>
+                <ul class="features-list">
+                    <li>Plan and manage unforgettable events.</li>
+                    <li>Discover top venues.</li>
+                    <li>Connect with vendors.</li>
+                    <li>Streamline your bookings—all in one place.</li>
+                </ul>
+                <a href="signup.html?type=organizer" class="btn btn-primary">Sign Up</a>
+                <p class="signin-link">Already have an account? <a href="signin.html?type=organizer">Sign In</a></p>
+            </div>
+
+            <!-- Vendor Card -->
+            <div class="account-card">
+                <div class="account-icon">
+                    <img src="public/assets/vendor-icon.svg" alt="Vendor">
+                </div>
+                <h3>Vendor</h3>
+                <ul class="features-list">
+                    <li>Showcase your services to a wide audience.</li>
+                    <li>Get discovered by event organizers.</li>
+                    <li>Connect with event hosts effortlessly.</li>
+                    <li>Help clients create unforgettable moments.</li>
+                </ul>
+                <a href="vendor-signup.html" class="btn btn-primary">Sign Up</a>
+                <p class="signin-link">Already have an account? <a href="vendor-signin.html">Sign In</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="js/loadHeader.js"></script>
+    <script src="js/loadFooter.js"></script>
+</body>
+</html>

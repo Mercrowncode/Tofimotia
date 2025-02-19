@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Sign In - TOFIMOTIA</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/vendor-signin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="signin-container">
+        <div class="signin-card">
+            <!-- Left Side - Visual & Branding -->
+            <div class="signin-visual">
+                <div class="logo-container">
+                    <img src="public/assets/Logo.png" alt="TOFIMOTIA Logo" class="logo">
+                </div>
+            </div>
+
+            <!-- Right Side - Sign In Form -->
+            <div class="signin-form-container">
+                <div class="signin-form-wrapper">
+                    <h1>Welcome Back!</h1>
+                    <p class="subtitle">Sign in to manage your business and bookings</p>
+
+                    <form id="vendor-signin-form" class="signin-form">
+                        <!-- Email Field -->
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <div class="input-with-icon">
+                                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                        </div>
+
+                        <!-- Password Field -->
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <div class="input-with-icon">
+                                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                                <i class="fas fa-eye-slash password-toggle"></i>
+                            </div>
+                        </div>
+
+                        <!-- Remember Me & Forgot Password -->
+                        <div class="form-row space-between">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="remember-me" name="remember-me">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-label">Remember Me</span>
+                            </label>
+                            <a href="forgot-password.html" class="forgot-password">Forgot Password?</a>
+                        </div>
+
+                        <!-- Sign In Button -->
+                        <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+
+                        <!-- Social Sign In -->
+                        <div class="social-signin">
+                            <div class="divider">
+                                <span>Or continue with</span>
+                            </div>
+                            <div class="social-buttons">
+                                <button type="button" class="btn btn-social btn-linkedin">
+                                    <i class="fab fa-linkedin-in"></i>
+                                    <span>LinkedIn</span>
+                                </button>
+                                <button type="button" class="btn btn-social btn-google">
+                                    <img src="public/assets/google.svg" alt="Google" class="google-icon">
+                                    <span>Google</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Sign Up Link -->
+                        <div class="signup-link">
+                            New Vendor? <a href="vendor-signup.html" class="text-accent">Sign Up</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/vendor-signin.js"></script>
+</body>
+</html>
